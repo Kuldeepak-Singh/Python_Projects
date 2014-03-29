@@ -30,10 +30,14 @@ try :
 		temp = destinationpath +os.sep+'diff' +os.sep+'new'
 		destination = filepath.replace(sourcepath,temp)
 		os.makedirs(destination)
+		explorenew = destination
 		temp = destinationpath +os.sep+'diff' +os.sep + 'old'
 		destination = filepath.replace(sourcepath,temp)
 		os.makedirs(destination)
+		exploreold = destination
+		os.startfile(explorenew,'open')
+		os.startfile(exploreold,'open')
 		print("Difference Directory Successfully created")
 except (FileExistsError , OSError):
-										print('Path Aleady Exists or File Not Found') 
+				    print('Path Aleady Exists or File Not Found') 
 
